@@ -47,7 +47,7 @@ public class HomeController : Controller
 
     public IActionResult News()
     {
-        var news = _context.Contents.Where(p => p.ICategoryId == 1).ToList();
+        var news = _context.Contents.Where(p => p.ICategoryId == 1).Take(6).ToList();
         return View(news);
     }
 }

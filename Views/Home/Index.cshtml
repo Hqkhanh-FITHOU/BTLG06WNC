@@ -2,7 +2,13 @@
 @{
     ViewData["Title"] = "Trang chủ";
 }
-
+<div class="container">
+    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+        <ol class="breadcrumb ms-2">
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+        </ol>
+    </nav>
+</div>
 <div class="container text-center" id="home-container">
     <div class="cell item1">
         <div>

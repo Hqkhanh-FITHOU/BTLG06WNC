@@ -252,3 +252,4 @@ D:\DATA\CODEHOANGQUOCKHANH\pjoweb\BTLG06WNC\obj\Debug\net8.0\BTLG06WNC.csproj.As
 D:\DATA\CODEHOANGQUOCKHANH\pjoweb\BTLG06WNC\obj\Debug\net8.0\BTLG06WNC.csproj.CopyComplete
 D:\DATA\CODEHOANGQUOCKHANH\pjoweb\BTLG06WNC\bin\Debug\net8.0\package-lock.json
 D:\DATA\CODEHOANGQUOCKHANH\pjoweb\BTLG06WNC\bin\Debug\net8.0\package.json
+D:\DATA\CODEHOANGQUOCKHANH\pjoweb\BTLG06WNC\obj\Debug\net8.0\BTLG06WNC.sourcelink.json

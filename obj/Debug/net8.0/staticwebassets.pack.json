@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\dang-ky-hien-tang-online-1-1.png"
     },
     {
+      "Id": "D:\\DATA\\CODEHOANGQUOCKHANH\\pjoweb\\BTLG06WNC\\wwwroot\\images\\gioi_thieu_hiep_hoi.png",
+      "PackagePath": "staticwebassets\\images\\gioi_thieu_hiep_hoi.png"
+    },
+    {
       "Id": "D:\\DATA\\CODEHOANGQUOCKHANH\\pjoweb\\BTLG06WNC\\wwwroot\\images\\logo_hiep_hoi_trai_tim.png",
       "PackagePath": "staticwebassets\\images\\logo_hiep_hoi_trai_tim.png"
     },

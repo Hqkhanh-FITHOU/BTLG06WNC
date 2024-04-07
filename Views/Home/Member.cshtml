@@ -10,10 +10,10 @@
     </nav>
 </div>
 <div class="text-center">
-    <h5 class="text-info-emphasis">Quyền lợi hội viên</h5>
+    <h5 class="text-info-emphasis text-uppercase">Quyền lợi hội viên</h5>
 </div>
 <div class="container mt-3 d-flex justify-content-center" id="members-container">
-    <div class="card text-center bg-primary text-white m-3" style="max-width: 18rem;">
+    <div class="card text-center border-primary m-3" style="max-width: 18rem;">
         <div class="card-header">
             <h5 class="card-title m-0">Cộng đồng</h5>
         </div>
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="card text-center bg-secondary text-white m-3" style="max-width: 18rem;">
+    <div class="card text-center border-primary m-3" style="max-width: 18rem;">
         <div class="card-header">
             <h5 class="card-title m-0">Mạng lưới liên kết</h5>
         </div>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="card text-center bg-success text-white m-3" style="max-width: 18rem;">
+    <div class="card text-center border-primary m-3" style="max-width: 18rem;">
         <div class="card-header">
             <h5 class="card-title m-0">Hoạt động từ thiện</h5>
         </div>
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div class="card text-center bg-warning m-3" style="max-width: 18rem;">
+    <div class="card text-center border-primary m-3" style="max-width: 18rem;">
         <div class="card-header">
             <h5 class="card-title m-0">Học hỏi và phát triển</h5>
         </div>
@@ -53,9 +53,23 @@
     <button class="btn btn-primary">Đăng ký hội viên</button>
 </div>
 
-<div class="text-center mt-5">
-    <h5 class="text-info-emphasis">Thành viên</h5>
+<div class="text-center mt-5 mb-5">
+    <h5 class="text-info-emphasis" text-uppercase>Thành viên tiêu biểu</h5>
 </div>
-<div class="container" id="members-list">
-    
+<div class="container text-center" id="members-list">
+    @foreach(var member in Model){
+        if(member.IRoleId == 2){
+            <div class="d-flex flex-column align-items-center justify-content-center shadow-sm rounded bg-body-tertiary py-5">
+                <div>
+                    <img class="rounded-circle mb-4" src="/images/avatars/avatar_hoder.png" height="50px" width="50px">
+                </div>
+                
+                <div>
+                    <h6>@member.SName</h6>
+                    <span>@member.SEmail</span> <br>
+                    <span>Hội viên</span>
+                </div>
+            </div>
+        }
+    }
 </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n6z72tgYNGLWwrKT4jOtOig/oP2U0Jw1Vbf2WsP46kw=",
+  "Hash": "QaM1163Eh/rS//Ld5MT8vbGAXfabcxlm5oJdOu1p+iQ=",
   "Source": "BTLG06WNC",
   "BasePath": "_content/BTLG06WNC",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\dang-ky-hien-tang-online-1-1.png"
+    },
+    {
+      "Identity": "D:\\DATA\\CODEHOANGQUOCKHANH\\pjoweb\\BTLG06WNC\\wwwroot\\images\\gioi_thieu_hiep_hoi.png",
+      "SourceId": "BTLG06WNC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DATA\\CODEHOANGQUOCKHANH\\pjoweb\\BTLG06WNC\\wwwroot\\",
+      "BasePath": "_content/BTLG06WNC",
+      "RelativePath": "images/gioi_thieu_hiep_hoi.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\gioi_thieu_hiep_hoi.png"
     },
     {
       "Identity": "D:\\DATA\\CODEHOANGQUOCKHANH\\pjoweb\\BTLG06WNC\\wwwroot\\images\\logo_hiep_hoi_trai_tim.png",

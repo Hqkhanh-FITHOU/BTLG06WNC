@@ -308,4 +308,28 @@ footer > p {
 
 #members-list {
   display: grid;
+  grid-template-columns: 400px 400px; 
+  justify-content: center;
+  gap: 25px;
+}
+
+
+#introduce-container > img.img-intro {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+#introduce-container > div.objective > div {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-content: center;
+  gap: 10px;
+  width: 70%;
+}
+
+#introduce-container > div.common > span {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
 }
