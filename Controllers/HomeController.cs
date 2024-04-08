@@ -33,6 +33,15 @@ public class HomeController : Controller
     {
         return View();
     }
+    [Authentication]
+    [HttpPost]
+    public IActionResult Feedback(Feedback item){
+        if(String.IsNullOrEmpty(item.SContent)){
+            ModelState.AddModelError("SContent", "Chưa có nội dung câu hỏi");
+            return View(item);
+        }
+        return View();
+    }
 
     public IActionResult Introduce()
     {

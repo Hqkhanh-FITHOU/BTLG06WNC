@@ -1,3 +1,5 @@
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
 @model List<Account>;
 @{
     ViewData["Title"] = "Hội viên";
@@ -49,10 +51,11 @@
         </div>
     </div>
 </div>
-<div class="text-center mt-2 text-uppercase">
-    <button class="btn btn-primary">Đăng ký hội viên</button>
-</div>
-
+@if(@HttpContextAccessor.HttpContext!.Session.GetString("User") == null){
+    <div class="text-center mt-2 text-uppercase">
+        <button class="btn btn-primary">Đăng ký hội viên</button>
+    </div>
+}
 <div class="text-center mt-5 mb-5">
     <h5 class="text-info-emphasis" text-uppercase>Thành viên tiêu biểu</h5>
 </div>

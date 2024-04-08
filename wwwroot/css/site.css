@@ -333,3 +333,9 @@ footer > p {
   display: block;
   margin: 0 auto;
 }
+
+
+#feedback-container > form > input {
+  width: 39%;
+  margin: 0 auto;
+}

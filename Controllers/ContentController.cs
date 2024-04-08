@@ -183,7 +183,7 @@ public class ContentController : Controller
     public IActionResult Detail(int id){
         var content = _context.Contents.FirstOrDefault(p => p.IContentId == id);
         var contentView = new ContentView {
-            ICategoryId = content.ICategoryId,
+            ICategoryId = content!.ICategoryId,
             DCreatedate = content.DCreatedate,
             SSource = content.SSource,
             SFilename = content.SImage,

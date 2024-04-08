@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Cổng thông tin điện tử";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,25 +23,30 @@
                 Hiệp hội trái tim tình thương
             </a>
             <ul class="nav">
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="">Đăng nhập</a>
-                </li>
-                <li class="nav-item d-flex align-items-center">
-                    <a class="nav-link" href="">Đăng ký</a>
-                </li>
-                <li class="nav-item d-flex align-items-center dropdown" >
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="">
-                        <img src="~/images/avatars/avatar_hoder.png" style="width: 30px; height: 30px;" class="rounded-circle" alt="">
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" asp-controller="Content" asp-action="Index">Quản lý tài nguyên</a></li>
-                        <li><a class="dropdown-item" href="#">Quản lý hội viên</a></li>
-                        <li><a class="dropdown-item" href="#">Thông tin tài khoản</a></li>
-                        <li><a class="dropdown-item" href="#">Thiết lập</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-                    </ul>
-                </li>
+                @if(@HttpContextAccessor.HttpContext!.Session.GetString("User") == null){
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" asp-action="Login" asp-controller="Account">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <a class="nav-link" asp-action="Register" asp-controller="Account">Đăng ký</a>
+                    </li>
+                }
+                else {
+                    <li class="nav-item d-flex align-items-center dropdown" >
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="">
+                            <img src="~/images/avatars/avatar_hoder.png" style="width: 30px; height: 30px;" class="rounded-circle" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-controller="Account" asp-action="Information">Thông tin tài khoản</a></li>
+                            @if(@HttpContextAccessor.HttpContext!.Session.GetInt32("Role") == 1){
+                                <li><a class="dropdown-item" asp-controller="Content" asp-action="Index">Quản lý tài nguyên</a></li>
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Index">Quản lý hội viên</a></li>
+                            }
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" asp-action="Logout" asp-controller="Account">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                }
             </ul>
         </div>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow mb-3">
