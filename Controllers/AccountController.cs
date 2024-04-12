@@ -170,6 +170,27 @@ public class AccountController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult Register(RegisterView register) { 
+        if(!ModelState.IsValid){
+            return View(register);
+        }
+        if(register.SPassword != register.SAuthenPassword){
+            ModelState.AddModelError("SAuthenPassword", "Xác thực mật khẩu không khớp");
+            return View(register);
+        }
+        Account account = new Account{
+            IRoleId = 2,
+            SEmail = register.SEmail,
+            SName = register.SAccountName,
+            DBirthofdate = register.DBirthofdate,
+            SPassword = register.SPassword,
+        };
+        _context.Accounts.Add(account);
+        _context.SaveChanges();
+        return RedirectToAction("Login","Account");
+    }
+
     public IActionResult Information(){
         var account = _context.Accounts.ToList().FirstOrDefault(
             p => p.SEmail.Equals(HttpContext.Session.GetString("User"))
